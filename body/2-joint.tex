@@ -40,7 +40,7 @@
     
     
     
-    \section{Multistable joint}
+    \section{Multistable joint}\label{sec:mutistable}
         To create a multistable joint, we will use the basic building block as seen in section \ref{sec:bistable} and stack two of them in serie. Figure \ref{fig:joint_multistable} shows how we stack the two bistable joint together. We have three blocks, the bottom block is anchored to the ground, the middle block is linked to the bottom one with two arms of length $r_1$ with and anchor distance of $\delta_1$, we also attached a spring that has a anchor at position $(x_{P_1}, y_{P_1})$. The top block is linked to the middle block in the same way but this time, arms have length $r_2$ and anchor distance $\delta_2$. Also the second block has an anchor point at position $(x_{P_2}, y_{P_2})$. 
         Both bistable joint has their own $theta_{i_1}$, $theta_{i_2}$ and horizontal maximum travel distance.
         
@@ -67,5 +67,13 @@
         Those states will lead to different type of sequences as we will see in Section \ref{sec:sequences}. The multistable structure is actuated from the top block. We define the origin by the \textit{state 00} resting point. We can easily imagine adding more bistable structure above our multistable joint in order to create even more states and possibilities, but for our experiments and analysis, we will stay focused on the 3 blocks tall multistable joint, the analysis for 4 blocks tall is being done in Dr. M. Zanaty's paper \cite{mo_main_paper}.
         
     \subsection{Sequences}\label{sec:sequences}
-    
+        Multistable joints have different possible states (\textit{00; 01; 10; 11}), those states may be activated when a specific scenario is triggered. The Equation \ref{eq:potential} shows the potential energy stored in the system for a combination of angles. Depending of the placement of the springs we will have different sequences. A sequence is a particular order of state. We will consider that all our sequences starts from \textit{state 00} and will hit the \textit{state 11} before coming back to the first \textit{state 00}. We can represent those sequences as in a final state machine of 4 states.We can see in Figure \ref{fig:sequences} the different sequences that our multistable will be able to run. 
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\textwidth]{images/sequennces.png}
+            \caption{Schematics showing sequences}
+            \label{fig:sequences}
+        \end{figure}
+        \todo{Need much more explaination and graph}
     
