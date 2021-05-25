@@ -9,5 +9,18 @@
             \caption{Top view of the robot. We can see four identical multistable joint that act as legs. The yellow part is the main frame. This main frame is connecting the ground block of the four multistable joint together. }
             \label{fig:robot_top_view}
         \end{figure}
-    \section{Actuation}
-    \section{Legs}
+        
+        The end points of the legs are attached to the middle and the top block of each multistable mechanism. The way they move will be described the section \ref{sec:legs}. Two actuators are attached to the main yellow frame, each actuators controls two multistable joint and they are oriented in a $180°$ shape, being co-linear but facing opposite direction. 
+        
+    \section{Legs}\label{sec:legs}
+        Legs are connected directly to a multistable joint system. They are right underneath the middle and the top block of the joint. We can see on Figure \ref{fig:forward_step} a side view, a top view and a dimetric view of a the legs during a forward step. 
+        The leg is build with two arms that are connected together on one end and the second end is respectively connected to the middle block and the top block. This forms a triangular shape as we can see on the side view of Figure \ref{fig:forward_step}. The position of the end of the leg in contact with the ground will be affected by the positions of the middle and the top block. The distance between the two blocks will affect the heights of the end of the leg. We can see during the forward step that when both middle and top blocks moves to a side at the same pace (bottom joint is moving), the end of the leg is moving at the same pace. On the other hand, when the top joint is moving, the only block that is moving is the top block, therefore it will affect a bit the horizontal position of the end of the leg, but it will especially change the height of the leg. When the distance between the two blocks are increasing, the height is decreasing. When the distance is decreasing, the height is increasing. We can already see here that due to the different sequence, the leg motion is drawing a hysteresis. This hysteresis is important as it allows the robot to move in different directions depending of the actuation and the sequences selected for the legs. 
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\textwidth]{images/forward_step.png}
+            \caption{Specific focus on a leg of a robot, here specifically in sequence B, where the top block is moving before the middle block. The leg is attached to a multistable structure and consists of a two arms linking the top block to the middle block with a common joint. We can see three views in the sequence order, the first columns is a dimetric view of the leg, where we can have a 3D view of the cycle. The second columns represent a top view of the leg that shows how the blocks are moving in the sequence order, where the top block is always moving before the middle block. Finally, the third columns is a side view of the leg with the two arms and the end plate. We can see how the legs is moving horizontally and vertically. We also see that it performs a cycle that is represented by a hysteresis.}
+            \label{fig:forward_step}
+        \end{figure}
+        
+    \section{Actuation}\label{sec:actuation}
+        The actuation is performed with linear actuators that are connected to the legs in a specific way. First we can see on Figure \ref{fig:robot_top_view} that they are oriented in the same axis but they are facing opposite direction. 
